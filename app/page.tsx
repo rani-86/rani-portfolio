@@ -15,22 +15,21 @@ function CopyEmailButton() {
   return (
     <button
       onClick={handleCopy}
-      className="inline-flex items-center justify-center px-8 py-3 rounded-full font-bold bg-blue-600 hover:bg-blue-700 text-white transition duration-300"
+      className={`px-8 py-3 rounded-full font-bold transition duration-300 flex items-center justify-center gap-2 border border-gray-700 ${
+        copied ? "bg-green-600 text-white border-green-600" : "bg-white text-black hover:bg-blue-600 hover:text-white hover:border-blue-600"
+      }`}
     >
-      {copied ? "Email Copied!" : "Copy Email"}
+      {copied ? "✓ Copied!" : "Copy Email"}
     </button>
   );
 }
 
 export default function Home() {
-  function handleCopy(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    throw new Error("Function not implemented.");
-  }
+  // DELETE THE 'handleCopy' FUNCTION THAT WAS HERE
 
   return (
-    <main className="bg-black text-white min-h-screen px-6 md:px-20">
+    <main className="bg-black text-white min-h-screen px-6 md:px-20 scroll-smooth">
       
-      {/* Navbar */}
       {/* Navbar */}
       <nav className="flex justify-between items-center py-6 border-b border-gray-800">
         <h1 className="font-semibold text-lg tracking-tight">Rani Sharma</h1>
@@ -51,15 +50,14 @@ export default function Home() {
             GitHub
           </a>
 
-          {/* New Resume Button */}
+          {/* Resume Button - MAKE SURE YOUR FILE IS NAMED resume.pdf IN PUBLIC FOLDER */}
           <a
-            href="/software_cv.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-full hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/10 transition duration-300"
           >
             <span>Resume</span>
-            {/* Small Download Icon */}
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -76,7 +74,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="py-24 md:py-32">
-        {/* Gradient Name */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           <span className="bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text">
             Rani Sharma
@@ -88,7 +85,6 @@ export default function Home() {
           authentication, scalable APIs, and optimized database architecture.
         </p>
 
-        {/* Buttons with Accent Color */}
         <div className="flex flex-wrap gap-4">
           <a
             href="#projects"
@@ -105,24 +101,14 @@ export default function Home() {
           >
             LinkedIn
           </a>
-
-          <a
-            href="https://github.com/rani-86"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-gray-700 px-8 py-3 rounded-full font-medium hover:border-white hover:text-white transition duration-300"
-          >
-            GitHub
-          </a>
         </div>
       </section>
+
       {/* Skills Section */}
       <section className="py-10">
         <h2 className="text-2xl font-bold mb-8 text-gray-200">Technical Stack</h2>
         
         <div className="grid md:grid-cols-3 gap-6">
-          
-          {/* Frontend Card */}
           <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Frontend</h3>
             <div className="flex flex-wrap gap-2">
@@ -134,7 +120,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Backend Card */}
           <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Backend</h3>
             <div className="flex flex-wrap gap-2">
@@ -146,7 +131,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Tools & DevOps Card */}
           <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & DevOps</h3>
             <div className="flex flex-wrap gap-2">
@@ -157,7 +141,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
@@ -170,23 +153,17 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-8">
           
-          {/* Project 1 - SPIE */}
           <Link
             href="/projects/spie"
             className="group bg-zinc-900/50 p-8 rounded-2xl border border-gray-800 hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 block"
           >
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
-                SPIE & PRODYOG
-              </h3>
+              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">SPIE & PRODYOG</h3>
               <span className="text-gray-500 group-hover:text-blue-400 transition transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
             </div>
-            
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Production-grade event management platform with role-based access, 
-              real-time leaderboards, and secure Google OAuth integration.
+              Production-grade event management platform with role-based access, real-time leaderboards, and secure Google OAuth integration.
             </p>
-
             <div className="flex flex-wrap gap-2 text-sm text-blue-400/90 font-mono">
               <span className="bg-blue-900/20 px-2 py-1 rounded">Next.js</span>
               <span className="bg-blue-900/20 px-2 py-1 rounded">PostgreSQL</span>
@@ -194,23 +171,17 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Project 2 - INKNEST */}
           <Link
             href="/projects/inknest"
             className="group bg-zinc-900/50 p-8 rounded-2xl border border-gray-800 hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 block"
           >
              <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
-                INKNEST
-              </h3>
+              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">INKNEST</h3>
               <span className="text-gray-500 group-hover:text-blue-400 transition transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
             </div>
-
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Full-stack printing service platform featuring modular REST APIs,
-              rate-limiting for security, and optimized MongoDB indexing.
+              Full-stack printing service platform featuring modular REST APIs, rate-limiting for security, and optimized MongoDB indexing.
             </p>
-
             <div className="flex flex-wrap gap-2 text-sm text-blue-400/90 font-mono">
               <span className="bg-blue-900/20 px-2 py-1 rounded">Node.js</span>
               <span className="bg-blue-900/20 px-2 py-1 rounded">MongoDB</span>
@@ -218,23 +189,17 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Project 3 - Accessibility */}
           <Link
             href="/projects/accessibility"
             className="group bg-zinc-900/50 p-8 rounded-2xl border border-gray-800 hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 md:col-span-2 block"
           >
              <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
-                Accessibility Analyzer
-              </h3>
+              <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">Accessibility Analyzer</h3>
               <span className="text-gray-500 group-hover:text-blue-400 transition transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
             </div>
-
             <p className="text-gray-400 mb-6 leading-relaxed max-w-2xl">
-              High-performance backend system for automated web audits. 
-              Leverages asynchronous processing pipelines to handle concurrent Lighthouse API requests without blocking.
+              High-performance backend system for automated web audits. Leverages asynchronous processing pipelines to handle concurrent Lighthouse API requests without blocking.
             </p>
-
             <div className="flex flex-wrap gap-2 text-sm text-blue-400/90 font-mono">
               <span className="bg-blue-900/20 px-2 py-1 rounded">Node.js</span>
               <span className="bg-blue-900/20 px-2 py-1 rounded">Lighthouse API</span>
@@ -243,9 +208,9 @@ export default function Home() {
           </Link>
 
         </div>
-</section>
+      </section>
 
-{/* Contact Section */}
+      {/* Contact Section */}
       <section id="contact" className="py-24 border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
 
@@ -255,11 +220,10 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4">
-          
-          {/* Option 1: Copy Email Button */}
+          {/* Copy Email Button */}
           <CopyEmailButton />
 
-          {/* Option 2: Direct Mail Link */}
+          {/* Direct Mail Link */}
           <a 
             href="mailto:rani2003333@gmail.com"
             className="inline-flex items-center justify-center px-8 py-3 rounded-full font-bold border border-gray-700 hover:bg-gray-800 transition duration-300"
