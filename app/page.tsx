@@ -1,6 +1,32 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+
+function CopyEmailButton() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("rani2003333@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="inline-flex items-center justify-center px-8 py-3 rounded-full font-bold bg-blue-600 hover:bg-blue-700 text-white transition duration-300"
+    >
+      {copied ? "Email Copied!" : "Copy Email"}
+    </button>
+  );
+}
 
 export default function Home() {
+  function handleCopy(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <main className="bg-black text-white min-h-screen px-6 md:px-20">
       
@@ -217,9 +243,9 @@ export default function Home() {
           </Link>
 
         </div>
-      </section>
+</section>
 
-      {/* Contact */}
+{/* Contact Section */}
       <section id="contact" className="py-24 border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
 
@@ -228,23 +254,29 @@ export default function Home() {
           Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
 
-        <a 
-          href="mailto:rani2003333@gmail.com"
-          className="inline-block bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-blue-600 hover:text-white transition duration-300"
-        >
-          Say Hello
-        </a>
+        <div className="flex flex-col md:flex-row gap-4">
+          
+          {/* Option 1: Copy Email Button */}
+          <CopyEmailButton />
+
+          {/* Option 2: Direct Mail Link */}
+          <a 
+            href="mailto:rani2003333@gmail.com"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full font-bold border border-gray-700 hover:bg-gray-800 transition duration-300"
+          >
+            Open Mail App
+          </a>
+        </div>
 
         <div className="flex gap-6 mt-12 text-gray-500">
           <a
-            href="https://www.linkedin.com/in/rani-sharma-6b90b527b/"
+            href="https://linkedin.com/in/YOUR_LINKEDIN"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-400 transition"
           >
             LinkedIn
           </a>
-
           <a
             href="https://github.com/rani-86"
             target="_blank"
@@ -255,7 +287,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
     </main>
   );
 }
