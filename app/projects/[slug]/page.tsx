@@ -4,8 +4,7 @@ const projects = {
   spie: {
     title: "SPIE & PRODYOG – Event Management Platform",
     description: `
-A production-grade full stack web platform built for official college society
-and annual fest operations.
+A production-grade full stack web platform built for official college society and annual fest operations.
 
 Key Features:
 - Google OAuth authentication
@@ -15,7 +14,7 @@ Key Features:
 - CSV export functionality
 - Production deployment
 `,
-    tech: "Next.js • Prisma • PostgreSQL • JWT • Google OAuth • Tailwind"
+    tech: "Next.js • Prisma • PostgreSQL • JWT • Google OAuth • Tailwind",
   },
   inknest: {
     title: "INKNEST – Printing Services Platform",
@@ -29,7 +28,7 @@ Key Features:
 - Rate limiting & request validation
 - Optimized database indexing
 `,
-    tech: "Node.js • Express • MongoDB • Cloudinary • JWT"
+    tech: "Node.js • Express • MongoDB • Cloudinary • JWT",
   },
   accessibility: {
     title: "Accessibility Analyzer – Web Audit System",
@@ -42,8 +41,8 @@ Key Features:
 - Scalable request handling
 - Fault-tolerant pipelines
 `,
-    tech: "Node.js • Express • Lighthouse API • Async Processing"
-  }
+    tech: "Node.js • Express • Lighthouse API • Async Processing",
+  },
 };
 
 export default function ProjectPage({
