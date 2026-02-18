@@ -1,9 +1,26 @@
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen px-6 md:px-20">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center py-6 border-b border-gray-800">
+        <h1 className="font-semibold text-lg">Rani Sharma</h1>
+
+        <div className="flex gap-6 text-gray-400 text-sm">
+          <a href="#projects" className="hover:text-white transition">Projects</a>
+          <a href="#contact" className="hover:text-white transition">Contact</a>
+          <a
+            href="https://github.com/rani-86"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition"
+          >
+            GitHub
+          </a>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="py-24">
+      <section className="py-24 border-t border-gray-800">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Rani Sharma
         </h1>
@@ -93,7 +110,8 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* Project 1 */}
-          <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition">
+          <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 hover:shadow-lg hover:shadow-white/5 transition duration-300">
+
             <h3 className="text-2xl font-semibold mb-4">
               SPIE & PRODYOG – Event Management Platform
             </h3>
@@ -206,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="py-24 border-t border-gray-800">
+      <section id="contact" className="py-24 border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-8">Contact</h2>
 
         <p className="text-gray-400 mb-4">
