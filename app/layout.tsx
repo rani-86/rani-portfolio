@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Rani Sharma | Full Stack Developer",
-  description: "Full Stack Developer building scalable web systems using Next.js and Node.js",
+  description: "Portfolio of Rani Sharma, a Full Stack Developer specializing in Next.js, Node.js, and secure backend systems.",
+  icons: {
+    icon: "/favicon.ico", // This looks for the icon in your public folder
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -24,12 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className="scroll-smooth">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

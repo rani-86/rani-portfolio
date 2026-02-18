@@ -5,19 +5,45 @@ export default function Home() {
     <main className="bg-black text-white min-h-screen px-6 md:px-20">
       
       {/* Navbar */}
+      {/* Navbar */}
       <nav className="flex justify-between items-center py-6 border-b border-gray-800">
         <h1 className="font-semibold text-lg tracking-tight">Rani Sharma</h1>
 
-        <div className="flex gap-6 text-gray-400 text-sm font-medium">
-          <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
-          <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+        <div className="flex items-center gap-6 text-gray-400 text-sm font-medium">
+          <a href="#projects" className="hover:text-blue-400 transition hidden md:block">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-blue-400 transition hidden md:block">
+            Contact
+          </a>
           <a
             href="https://github.com/rani-86"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
+            className="hover:text-blue-400 transition hidden md:block"
           >
             GitHub
+          </a>
+
+          {/* New Resume Button */}
+          <a
+            href="/software_cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-full hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/10 transition duration-300"
+          >
+            <span>Resume</span>
+            {/* Small Download Icon */}
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              strokeWidth={2} 
+              stroke="currentColor" 
+              className="w-4 h-4"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M12 9.75l-3 3m0 0l3 3m-3-3H21" />
+            </svg>
           </a>
         </div>
       </nav>
@@ -62,6 +88,50 @@ export default function Home() {
           >
             GitHub
           </a>
+        </div>
+      </section>
+      {/* Skills Section */}
+      <section className="py-10">
+        <h2 className="text-2xl font-bold mb-8 text-gray-200">Technical Stack</h2>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          
+          {/* Frontend Card */}
+          <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Frontend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Next.js", "React", "Tailwind CSS", "TypeScript", "HTML5/CSS3"].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-800 rounded-md text-sm text-gray-300 border border-gray-700">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend Card */}
+          <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Backend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma", "REST API"].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-800 rounded-md text-sm text-gray-300 border border-gray-700">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Tools & DevOps Card */}
+          <div className="bg-zinc-900/50 p-6 rounded-xl border border-gray-800 hover:border-blue-500/30 transition">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & DevOps</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Git/GitHub", "Docker", "AWS", "Vercel", "Postman", "Linux"].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-gray-800 rounded-md text-sm text-gray-300 border border-gray-700">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
