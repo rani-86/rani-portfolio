@@ -143,6 +143,35 @@ export default function Home() {
           GitHub
         </a>
       </div>
+      {/* Project 3 */}
+<div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition">
+  <h3 className="text-2xl font-semibold mb-4">
+    Accessibility Analyzer – Web Audit System
+  </h3>
+
+  <p className="text-gray-400 mb-6 leading-7">
+    Developed an asynchronous backend system that analyzes webpages
+    using Lighthouse API to generate structured accessibility reports.
+    Designed scalable request handling and fault-tolerant pipelines
+    to process concurrent audits efficiently.
+  </p>
+
+  <p className="text-sm text-gray-500 mb-6">
+    Node.js • Express • Lighthouse API • Async Processing
+  </p>
+
+  <div className="flex gap-4">
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+    >
+      GitHub
+    </a>
+  </div>
+</div>
+
     </div>
 
   </div>
