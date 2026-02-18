@@ -7,9 +7,11 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Rani Sharma
         </h1>
-        <p className="text-xl md:text-2xl text-gray-400 mb-8">
-          Full Stack Developer | Next.js | Node.js | Scalable Web Systems
+        <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl">
+          Building production-grade full stack applications with secure authentication,
+          scalable APIs, and optimized database architecture.
         </p>
+
         <div className="flex gap-4">
           <a href="#projects" className="bg-white text-black px-6 py-3 rounded-md font-semibold">
             View Projects
@@ -24,13 +26,13 @@ export default function Home() {
       <section className="py-20 border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-6">About Me</h2>
         <p className="text-gray-400 leading-7 max-w-3xl">
-          I am a B.Tech student at NIT Jamshedpur (CGPA: 8.08) with strong
-          foundations in Data Structures, Operating Systems, DBMS, and Networks.
-          I build end-to-end web applications — from responsive frontend interfaces
-          to secure backend APIs and optimized database architecture.
-          I have developed production-grade systems used in live college events
-          with authentication, analytics, and role-based workflows.
+          I am a Full Stack Developer with hands-on experience designing and deploying
+          real-world web applications. I build complete systems — from responsive frontend
+          interfaces to secure backend APIs and relational database architecture.
+          My work includes a production event management platform used in live operations,
+          featuring authentication, analytics dashboards, and role-based workflows.
         </p>
+
       </section>
 
       {/* Skills */}
