@@ -77,57 +77,77 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-20 border-t border-gray-800">
-        <h2 className="text-3xl font-bold mb-10">Projects</h2>
+      <section id="projects" className="py-24 border-t border-gray-800">
+  <h2 className="text-3xl font-bold mb-16">Featured Projects</h2>
 
-        <div className="space-y-12">
+  <div className="grid md:grid-cols-2 gap-10">
 
-          {/* SPIE */}
-          <div className="border border-gray-800 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">
-              SPIE & PRODYOG – Event Management Platform
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Built a production-ready full stack platform for event registration,
-              team management, and leaderboard operations. Implemented Google OAuth
-              with JWT session handling, role-based admin access, relational schema
-              constraints, and analytics dashboard with CSV export.
-            </p>
-            <p className="text-sm text-gray-500 mb-4">
-              Tech: Next.js, Prisma, PostgreSQL, JWT, Google OAuth
-            </p>
-            <div className="flex gap-4">
-              <a href="https://github.com/YOUR_GITHUB_LINK" target="_blank" className="underline">
-                GitHub
-              </a>
-              <a href="#" className="underline">
-                Live Demo
-              </a>
-            </div>
-          </div>
+    {/* Project 1 */}
+    <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition">
+      <h3 className="text-2xl font-semibold mb-4">
+        SPIE & PRODYOG – Event Management Platform
+      </h3>
 
-          {/* INKNEST */}
-          <div className="border border-gray-800 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">
-              INKNEST – Printing Services Platform
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Developed modular REST APIs for authentication, order processing,
-              and file uploads. Integrated Cloudinary for media storage and
-              implemented secure JWT authentication with rate limiting.
-            </p>
-            <p className="text-sm text-gray-500 mb-4">
-              Tech: Node.js, Express, MongoDB, Cloudinary
-            </p>
-            <div className="flex gap-4">
-              <a href="https://github.com/YOUR_GITHUB_LINK" target="_blank" className="underline">
-                GitHub
-              </a>
-            </div>
-          </div>
+      <p className="text-gray-400 mb-6 leading-7">
+        Built a production-grade full stack platform for event registration,
+        team management, and leaderboard operations. Implemented Google OAuth
+        authentication with JWT session handling, role-based admin workflows,
+        and relational database constraints ensuring data integrity.
+      </p>
 
-        </div>
-      </section>
+      <p className="text-sm text-gray-500 mb-6">
+        Next.js • Prisma • PostgreSQL • JWT • Google OAuth • Tailwind
+      </p>
+
+      <div className="flex gap-4">
+        <a
+          href="https://github.com/rani-86/rani-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+        >
+          GitHub
+        </a>
+        <a
+          href="#"
+          className="px-5 py-2 bg-white text-black rounded-md hover:opacity-80 transition"
+        >
+          Live
+        </a>
+      </div>
+    </div>
+
+    {/* Project 2 */}
+    <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition">
+      <h3 className="text-2xl font-semibold mb-4">
+        INKNEST – Printing Services Platform
+      </h3>
+
+      <p className="text-gray-400 mb-6 leading-7">
+        Designed modular REST APIs for authentication, order processing,
+        and secure file uploads. Integrated Cloudinary for media storage and
+        implemented request validation, rate limiting, and optimized database queries.
+      </p>
+
+      <p className="text-sm text-gray-500 mb-6">
+        Node.js • Express • MongoDB • Cloudinary • JWT
+      </p>
+
+      <div className="flex gap-4">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       {/* Contact */}
       <section className="py-20 border-t border-gray-800">
