@@ -3,14 +3,17 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen px-6 md:px-20">
-
       {/* Navbar */}
       <nav className="flex justify-between items-center py-6 border-b border-gray-800">
         <h1 className="font-semibold text-lg">Rani Sharma</h1>
 
         <div className="flex gap-6 text-gray-400 text-sm">
-          <a href="#projects" className="hover:text-white transition">Projects</a>
-          <a href="#contact" className="hover:text-white transition">Contact</a>
+          <a href="#projects" className="hover:text-white transition">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-white transition">
+            Contact
+          </a>
           <a
             href="https://github.com/rani-86"
             target="_blank"
@@ -24,13 +27,11 @@ export default function Home() {
 
       {/* Hero */}
       <section className="py-24">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Rani Sharma
-        </h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">Rani Sharma</h1>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl">
-          Building production-grade full stack applications with secure authentication,
-          scalable APIs, and optimized database architecture.
+          Building production-grade full stack applications with secure
+          authentication, scalable APIs, and optimized database architecture.
         </p>
 
         <div className="flex gap-4">
@@ -57,7 +58,6 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-16">Featured Projects</h2>
 
         <div className="grid md:grid-cols-2 gap-10">
-
           {/* Project 1 */}
           <Link
             href="/projects/spie"
@@ -68,8 +68,8 @@ export default function Home() {
             </h3>
 
             <p className="text-gray-400 mb-6 leading-7">
-              Production-grade full stack platform for event registration,
-              team management, and leaderboard operations with secure authentication.
+              Production-grade full stack platform for event registration, team
+              management, and leaderboard operations with secure authentication.
             </p>
 
             <p className="text-sm text-gray-500">
@@ -87,8 +87,8 @@ export default function Home() {
             </h3>
 
             <p className="text-gray-400 mb-6 leading-7">
-              Modular REST API-based system for authentication,
-              order processing, and secure media handling.
+              Modular REST API-based system for authentication, order
+              processing, and secure media handling.
             </p>
 
             <p className="text-sm text-gray-500">
@@ -106,15 +106,14 @@ export default function Home() {
             </h3>
 
             <p className="text-gray-400 mb-6 leading-7">
-              Asynchronous backend system that analyzes webpages using
-              Lighthouse API with scalable processing pipelines.
+              Asynchronous backend system that analyzes webpages using Lighthouse
+              API with scalable processing pipelines.
             </p>
 
             <p className="text-sm text-gray-500">
               Node.js • Express • Lighthouse API • Async Processing
             </p>
           </Link>
-
         </div>
       </section>
 
@@ -122,9 +121,7 @@ export default function Home() {
       <section id="contact" className="py-24 border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-8">Contact</h2>
 
-        <p className="text-gray-400 mb-4">
-          Email: rani2003333@gmail.com
-        </p>
+        <p className="text-gray-400 mb-4">Email: rani2003333@gmail.com</p>
 
         <div className="flex gap-6">
           <a
@@ -146,7 +143,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
     </main>
   );
 }

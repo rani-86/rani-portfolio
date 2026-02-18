@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+// 1. Define your projects data
 const projects = {
   spie: {
     title: "SPIE & PRODYOG – Event Management Platform",
@@ -45,12 +46,22 @@ Key Features:
   },
 };
 
-export default function ProjectPage({
+// 2. REQUIRED: Tell Next.js which pages to build at deploy time
+export async function generateStaticParams() {
+  return Object.keys(projects).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+// 3. The Page Component
+export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projects[params.slug as keyof typeof projects];
+  // Await the params (Required for Next.js 15+)
+  const resolvedParams = await params;
+  const project = projects[resolvedParams.slug as keyof typeof projects];
 
   if (!project) return notFound();
 
@@ -62,9 +73,7 @@ export default function ProjectPage({
         {project.description}
       </p>
 
-      <p className="text-sm text-gray-500 mb-8">
-        {project.tech}
-      </p>
+      <p className="text-sm text-gray-500 mb-8">{project.tech}</p>
 
       <a
         href="/"
