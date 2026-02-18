@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen px-6 md:px-20">
@@ -110,7 +112,8 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* Project 1 */}
-          <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 hover:shadow-lg hover:shadow-white/5 transition duration-300">
+          <Link href="/projects/spie" className="bg-zinc-900 ... block">
+
 
             <h3 className="text-2xl font-semibold mb-4">
               SPIE & PRODYOG – Event Management Platform
@@ -128,19 +131,20 @@ export default function Home() {
             </p>
 
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
               >
                 GitHub
-              </a>
+              </a> */}
             </div>
-          </div>
+          </Link>
 
           {/* Project 2 */}
-          <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition">
+          <Link href="/projects/spie" className="bg-zinc-900 ... block">
+
             <h3 className="text-2xl font-semibold mb-4">
               INKNEST – Printing Services Platform
             </h3>
@@ -155,19 +159,20 @@ export default function Home() {
             </p>
 
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
               >
                 GitHub
-              </a>
+              </a> */}
             </div>
-          </div>
+          </Link>
 
           {/* Project 3 - Full Width */}
-          <div className="bg-zinc-900 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition md:col-span-2">
+          <Link href="/projects/spie" className="bg-zinc-900 ... block">
+
             <h3 className="text-2xl font-semibold mb-4">
               Accessibility Analyzer – Web Audit System
             </h3>
@@ -184,16 +189,16 @@ export default function Home() {
             </p>
 
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
               >
                 GitHub
-              </a>
+              </a> */}
             </div>
-          </div>
+          </Link>
 
         </div>
       </section>
